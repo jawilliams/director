@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h1>Client Control</h1>
+    Name:<%=@client.name%><br />
+    Phone:<%=@client.phone%><br />
+    Notes:<%=best_in_place @client, :notes %><br />
+    Cut:<%=@client.cut %><br />
+    Color:<%=@client.color %><br />
+    
+    <body>
+<br />
+<%=link_to "Edit", edit_client_path%>
+<%=link_to 'Delete', client_path(@client, :destroy => true), :confirm =>"Are you sure?", :method => :delete %> 

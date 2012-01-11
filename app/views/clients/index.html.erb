@@ -1,0 +1,23 @@
+<head>
+  <title>Do you hair?</title>
+</head>
+
+<h1> Client Control </h1>
+<body>
+    <div>
+      <table>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+      <% @clients.each do |f|%>
+        <tr>
+          <td><%=link_to f.id, f %></td>
+          <td><%=f.name%></td>
+          <td><%=f.phone%></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>    
+  </body>
+<br />
+<%= link_to "New", new_client_path%>
