@@ -1,13 +1,18 @@
-<html>
-  <body>
-    <h1>Client Control</h1>
+
+
+  <h1>Client Control</h1>
+  <div id="body"> 
     Name:<%=@client.name%><br />
     Phone:<%=@client.phone%><br />
     Notes:<%=best_in_place @client, :notes %><br />
     Cut:<%=@client.cut %><br />
     Color:<%=@client.color %><br />
-    
-    <body>
+  </div>
 <br />
-<%=link_to "Edit", edit_client_path%>
-<%=link_to 'Delete', client_path(@client, :destroy => true), :confirm =>"Are you sure?", :method => :delete %> 
+<ul id="navigation">
+  <%=link_to "Edit", edit_client_path%>
+  <%=link_to "Index", clients_path %>
+  <%=link_to 'Delete', client_path(@client, :destroy => true), :confirm =>"Are you sure?", :method => :delete %> 
+</ul>
+</html>
+
